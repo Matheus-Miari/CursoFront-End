@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table td, table th{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        table caption{
+            font-size: 1.5em;
+            margin: 10px;
+            caption-side: top;
+            text-align: left;
+            font-style: italic;
+        }
+        tfoot td, table th{
+            font-weight: bold;
+            background-color: #ccc;
+        }
+        div{
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <caption>Titulo da tabela com caption</caption>
+            <thead>
+                <tr>
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td colspan="2">Span 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Rodape 1</td>
+                    <td>Rodape 2</td>
+                    <td>Rodape 3</td>
+                </tr>
+            </tfoot>
+        </table>
+                
+    </div>
+</body>
+</html>

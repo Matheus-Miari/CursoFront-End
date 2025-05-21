@@ -1,0 +1,110 @@
+
+.white-bg {
+    background-color: var(--color-white);
+    color: var(--primary-color);
+}
+.main-bg {
+    background-image: url(../img/MAIN.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--color-white);
+}
+.main-content{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
+.menu{
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--color-gray);
+    z-index: 1;
+}
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu h1 {
+    font-size: 2.3rem;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+
+}
+.menu ul li a{
+    display: block;
+    padding: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--primary-color);
+    position: relative;
+}
+.menu h1 a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    width: 0;
+    height: 0.1rem;
+    background: var(--color-red);
+    transition: all 300ms ease-in-out;
+}
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
+.menu-spacing {
+    height: 65px;
+}
+.intro-content{
+    position: relative;
+    top: -7rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(20px);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.hero-intro, .hero-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.hero-intro h2{
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.hero-img img{
+    max-width: 100%;
+    height: auto;
+}
+.top3-content{
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 64rem;
+    text-align: center;
+}
+.grid-one-content {
+    height: 100vh;
+}
