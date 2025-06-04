@@ -1,0 +1,18 @@
+body{ 
+    padding-bottom: 500px;
+    font-family: sans-serif;
+    background-color: darkgray;
+    
+}
+
+div{
+    margin-bottom: 10px;
+}
+
+input, label {
+    display: block;
+}
+
+.radio label, .radio input, .radio span {
+    display: inline-block;
+}

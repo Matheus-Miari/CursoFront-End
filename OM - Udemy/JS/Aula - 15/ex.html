@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <section>
+            <h1>Numero: <span id="numero"></span></h1>
+            <p>Raiz quadrada: <span id="raiz"></span></p>
+            <p>Inteiro: <span id="int"></span></p>
+            <p>NaN: <span id="nan"></span></p>
+            <p>Arredondando para baixo: <span id="arreBaixo"></span></p>
+            <p>Arredondando para cima: <span id="arreCima"></span></p>
+            <p>Com duas casas decimais: <span id="decimal"></span></p>
+    </section>
+    <script>
+        const num1 = Number(prompt('Digite um numero: '));
+        // NUMERO
+        numero.innerHTML = num1;
+
+        //RAIZ DO NUMERO
+        raiz.innerHTML = num1 ** 0.5;
+
+        // NUMERO INTEIRO 
+
+        int.innerHTML = (Number.isInteger(num1));
+
+        // is nan
+
+        nan.innerHTML = isNaN(num1);
+
+        // arrendodamento
+
+        arreBaixo.innerHTML = Math.floor(num1);
+
+        arreCima.innerHTML = Math.ceil(num1);
+
+        // decimal
+        decimal.innerHTML = (num1.toFixed(2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: steelblue;
+        }
+        div#area{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height:200px;
+            transition: all 300ms ease;
+        }
+        #area:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Nao clique
+    </div>
+
+    <script>
+        var a = document.getElementById('area');
+        //eventos
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+        // funcao = conjunto de codigo quanto algo acontecer = ex: quando clicar {
+        function clicar(){      
+            a.innerText = 'Clicou !';
+            a.style.background = 'red'
+        };
+        function entrar() {
+
+            a.innerText = 'Entrou !';
+        };
+        function sair(){
+            a.innerText = 'Saiu !';
+            a.style.background = 'green'
+        };
+    </script>
+</body>
+</html>
