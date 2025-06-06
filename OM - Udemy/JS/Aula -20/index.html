@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            background-color: darkslategrey;
+            color: white;
+            font-family: monospace;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+        button {
+            background-color: white;
+            color: darkslategrey;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="form">
+        <p>Nome: <input type="text" class="name"></p>
+        <p>Sobrenome <input type="text" class="sobrenome"></p>
+        <p>Idade: <input type="number" class="idade"></p>
+        <p>Peso: <input type="text" class="peso"></p>
+        <p>Altura: <input type="text" class="altura"></p>
+        <button>Enviar</button>
+    </form>
+    <div class="resultado">
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
