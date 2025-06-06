@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: darkcyan;
+            font: normal;
+        }
+        header{
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        section{ 
+            background-color: whitesmoke;
+            border-radius: 10px;
+            padding: 20px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        a{
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        div{
+            text-align: center;
+            padding: 10px
+        }
+        /* 
+        colors -- #AD7540
+        2 -- #FEF1C5
+        3 --  #2C282E
+
+        */
+
+    </style>
+</head>
+<body onload="carregat()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="msg">
+        </div>
+        <div id="imagem">
+            <img src="" alt="" id="foto">
+        </div>
+    </section>
+    <footer>
+        <p>Desenvolvido por <a href="#">Matheus</a> &copy; 2025</p>
+    </footer>
+    <script>
+        function carregat () {
+            let msg = document.querySelector('#msg');
+            let img = document.querySelector('#foto');
+            let data = new Date();
+            let hora = data.getHours();
+            msg.innerHTML = `Agora são ${hora} horas.`;
+            if (hora >= 0 && hora < 12) {
+                // Bom dia
+                img.src = 'https://images.pexels.com/photos/66274/sunset-poppy-backlight-66274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+                document.body.style.backgroundColor = '#FEF1C5';
+                msg.innerHTML += '<p>Bom dia!</p>';
+            } else if (hora >= 12 && hora < 18) {
+                // Boa tarde
+                img.src = 'https://images.pexels.com/photos/858241/pexels-photo-858241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+                document.body.style.backgroundColor = '#AD7540';
+                msg.innerHTML += '<p>Boa tarde!</p>';
+            } else {
+                // Boa noite
+                img.src = 'https://images.pexels.com/photos/681467/pexels-photo-681467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+                document.body.style.backgroundColor = '#2C282E';
+                msg.innerHTML += '<p>Boa noite!</p>';
+            }
+            img.style.display = 'block';
+        }
+
+    </script>
+</body>
+</html>

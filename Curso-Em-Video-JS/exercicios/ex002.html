@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: darkcyan;
+            font: normal;
+        }
+        header{
+            color: white;
+            text-align: center;
+        }
+        section{ 
+            background-color: whitesmoke;
+            border-radius: 10px;
+            padding: 20px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+        a{
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        input, select, button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .divsex {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <label for="idade">Ano de nascimento:</label>
+            <input type="number" id="idade" name="idade" required>
+        </div>
+        <div>
+            <div class="divsex">
+                <label for="sex">Sexo: </label>
+                    <input type="radio" id="masculino" name="radsex" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="radsex" id="feminino" value="feminino">
+                    <label for="feminino">Feminino</label>
+            </div>
+        </div>
+        <div>
+            <button id="verificar" onclick="verificar()">Verificar</button>
+        </div>
+        <div id="resultado">
+
+        </div>
+    </section>
+    <footer>
+        <p>Desenvolvido por <a href="#">Matheus</a> &copy; 2025</p>
+    </footer>
+    <script>
+        function verificar (){
+            let data = new Date();
+            let anoAtual = data.getFullYear();
+            let fano = document.getElementById('idade').value;
+            let res = document.getElementById('resultado');
+
+            if (fano.length == 0 || fano > anoAtual) {
+                window.alert('Verifique os dados e tente novamente!');
+            } else {
+                let fsex = document.getElementsByName('radsex');
+                let idade = anoAtual - Number(fano);
+                let genero = '';
+                if (fsex[0].checked) {
+                    genero = 'homem';
+                } else if (fsex[1].checked) {
+                    genero = 'mulher';
+                } else {
+                    window.alert('Selecione um sexo!');
+                    return;
+                }
+                res.innerHTML = `Detectamos ${genero} de ${idade} anos.`;
+            }
+        }
+    </script>
+</body>
+</html>

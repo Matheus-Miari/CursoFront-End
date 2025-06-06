@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+<body>
+    <h1>Sistema multas</h1>
+    <label for="velo">Velocidade do carro</label>
+    <input type="number" id="velo" placeholder="Digite a velocidade do carro">
+    <input type="button" value="Verificar" onclick="verificarMulta()">
+    <p id="resultado"></p>
+
+    <script>
+    function verificarMulta() {
+    var velocidade = document.getElementById('velo').value;
+    var resultado = document.getElementById('resultado');
+    velocidade = Number(velocidade);
+        if (velocidade <= 60) {
+            resultado.innerHTML = 'Velocidade dentro do limite permitido.';
+        } else {
+            var excesso = velocidade - 60;
+            var multa = excesso * 5;
+            resultado.innerHTML = `Velocidade acima do limite permitido! Você foi multado em R$ <strong>${multa.toFixed(2)}</strong>.`;
+        }
+    }
+    </script>
+</body>
+</html>
